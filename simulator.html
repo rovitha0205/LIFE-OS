@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LifeOS | Scenario Engine</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script type="module" crossorigin src="/assets/gsap-0lJgtTtq.js"></script>
+  <script type="module" crossorigin src="/assets/three-Dz0kbOYw.js"></script>
+  <script type="module" crossorigin src="/assets/main-DdDq_3Om.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-CndWFFvC.css">
+</head>
+<body data-page="simulator" class="page-enter">
+  <div class="scene-background" id="sceneBackground" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <aside class="sidebar" id="sidebar" aria-label="Primary Navigation">
+    <div class="brand">
+      <div class="brand-logo"><i class="fa-solid fa-cube"></i></div>
+      <div>
+        <h1>LifeOS</h1>
+        <p>Cognitive Operations</p>
+      </div>
+    </div>
+
+    <nav class="menu" aria-label="Primary">
+      <a href="index.html" data-nav="dashboard"><i class="fa-solid fa-compass"></i> Command Deck</a>
+      <a href="insights.html" data-nav="insights"><i class="fa-solid fa-chart-column"></i> Signal Lab</a>
+      <a href="simulator.html" data-nav="simulator"><i class="fa-solid fa-vial-circle-check"></i> Scenario Engine</a>
+      <a href="focus.html" data-nav="focus"><i class="fa-solid fa-crosshairs"></i> Deep Focus</a>
+    </nav>
+
+    <div class="sidebar-foot">
+      <span><i class="fa-solid fa-shield-halved"></i> Encrypted Session</span>
+      <span>v4.0</span>
+    </div>
+  </aside>
+
+  <div class="page-shell" id="pageShell">
+    <header class="top-nav card shell-raise">
+      <div class="left-top">
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle sidebar">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div>
+          <p class="eyebrow">Forecast Layer</p>
+          <h2 class="section-title">Scenario Engine</h2>
+        </div>
+      </div>
+      <div class="right-top">
+        <span class="date-chip" id="dateChip"></span>
+        <button class="icon-btn" type="button" aria-label="Notifications"><i class="fa-regular fa-bell"></i><span class="dot"></span></button>
+        <button class="profile" type="button"><span class="avatar">AL</span><span>Rovitha Sri Kandasamy</span></button>
+      </div>
+    </header>
+
+    <main class="content cinematic-layout">
+      <section class="row">
+        <article class="card hero-card shell-raise animate-in">
+          <div class="card-title-row">
+            <h3>Model a Decision Before You Commit</h3>
+            <span class="pill pill-green">Realtime forecast</span>
+          </div>
+          <form class="simulator-form" data-output="simOutputPage" data-history="simHistory" aria-label="Scenario simulation form">
+            <label for="scenarioPage">Scenario Input</label>
+            <textarea id="scenarioPage" name="scenario" placeholder="Describe your plan with timing, workload, and recovery strategy."></textarea>
+            <button class="btn btn-primary" type="submit"><i class="fa-solid fa-play"></i> Simulate Outcome</button>
+          </form>
+          <div class="sim-output" id="simOutputPage" aria-live="polite" aria-atomic="true">
+            <span class="pill pill-blue">Ready</span>
+            <p>Run a scenario to generate confidence signals and tactical recommendations.</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="row row-bottom">
+        <article class="card tasks-card shell-raise animate-in">
+          <h3>Simulation History</h3>
+          <ul class="task-list" id="simHistory">
+            <li><span class="task-dot task-blue"></span>History appears after your first simulation <span class="priority low">Info</span></li>
+          </ul>
+        </article>
+
+        <article class="card sim-card shell-raise animate-in">
+          <h3>Model Rules</h3>
+          <p class="insights-copy">Current baseline: study-heavy scenarios prioritize execution gains, rest-heavy scenarios prioritize cognitive recovery, and mixed scenarios return balanced tradeoffs.</p>
+          <div class="kpi-row">
+            <div class="kpi"><strong data-counter="82" data-suffix="%">82%</strong><small>Study success rate</small></div>
+            <div class="kpi"><strong data-counter="76" data-suffix="%">76%</strong><small>Recovery confidence</small></div>
+            <div class="kpi"><strong data-counter="68" data-suffix="%">68%</strong><small>Mixed-mode stability</small></div>
+          </div>
+        </article>
+      </section>
+
+      <section class="row">
+        <article class="card timeline-section shell-raise animate-in">
+          <div class="card-title-row">
+            <h3>Simulation Lifecycle</h3>
+            <span class="pill pill-blue">Model flow</span>
+          </div>
+          <div class="timeline-track">
+            <div class="timeline-progress"></div>
+            <article class="timeline-item"><h4>Input Parsing</h4><p>Scenario language is mapped into workload and recovery intents.</p></article>
+            <article class="timeline-item"><h4>Signal Weighting</h4><p>The engine scores execution, fatigue, and clarity probabilities.</p></article>
+            <article class="timeline-item"><h4>Outcome Projection</h4><p>Recommendations are generated from the highest confidence direction.</p></article>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <aside class="ai-panel" id="aiPanel">
+    <div class="panel-head">
+      <h3>AI Command Notes</h3>
+      <button class="icon-btn ghost" id="panelToggle" type="button" aria-label="Collapse insights panel">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+
+    <article class="primary-insight shell-raise">
+      <span class="pill pill-blue">Primary Signal</span>
+      <p>Predictions are strongest when scenarios include both a clear objective and one explicit constraint.</p>
+    </article>
+
+    <button class="expand-btn" id="expandInsights" type="button" aria-expanded="false">
+      <i class="fa-solid fa-layer-group"></i> Show More Insights
+    </button>
+
+    <div class="secondary-insights" id="secondaryInsights">
+      <article><i class="fa-solid fa-pen"></i><p>Write scenarios as action plus duration plus tradeoff for higher model confidence.</p></article>
+      <article><i class="fa-solid fa-square-poll-vertical"></i><p>Frequent scenario checks improve weekly confidence and reduce rework risk.</p></article>
+      <article><i class="fa-solid fa-heart-pulse"></i><p>Include one recovery variable in high-load plans to protect performance continuity.</p></article>
+    </div>
+  </aside>
+
+
+</body>
+</html>

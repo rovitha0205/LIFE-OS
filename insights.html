@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LifeOS | Signal Lab</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script type="module" crossorigin src="/assets/gsap-0lJgtTtq.js"></script>
+  <script type="module" crossorigin src="/assets/three-Dz0kbOYw.js"></script>
+  <script type="module" crossorigin src="/assets/main-DdDq_3Om.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-CndWFFvC.css">
+</head>
+<body data-page="insights" class="page-enter">
+  <div class="scene-background" id="sceneBackground" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <aside class="sidebar" id="sidebar" aria-label="Primary Navigation">
+    <div class="brand">
+      <div class="brand-logo"><i class="fa-solid fa-cube"></i></div>
+      <div>
+        <h1>LifeOS</h1>
+        <p>Cognitive Operations</p>
+      </div>
+    </div>
+
+    <nav class="menu" aria-label="Primary">
+      <a href="index.html" data-nav="dashboard"><i class="fa-solid fa-compass"></i> Command Deck</a>
+      <a href="insights.html" data-nav="insights"><i class="fa-solid fa-chart-column"></i> Signal Lab</a>
+      <a href="simulator.html" data-nav="simulator"><i class="fa-solid fa-vial-circle-check"></i> Scenario Engine</a>
+      <a href="focus.html" data-nav="focus"><i class="fa-solid fa-crosshairs"></i> Deep Focus</a>
+    </nav>
+
+    <div class="sidebar-foot">
+      <span><i class="fa-solid fa-shield-halved"></i> Encrypted Session</span>
+      <span>v4.0</span>
+    </div>
+  </aside>
+
+  <div class="page-shell" id="pageShell">
+    <header class="top-nav card shell-raise">
+      <div class="left-top">
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle sidebar">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div>
+          <p class="eyebrow">Predictive Layer</p>
+          <h2 class="section-title">Signal Lab</h2>
+        </div>
+      </div>
+      <div class="right-top">
+        <span class="date-chip" id="dateChip"></span>
+        <button class="icon-btn" type="button" aria-label="Notifications"><i class="fa-regular fa-bell"></i><span class="dot"></span></button>
+        <button class="profile" type="button"><span class="avatar">AL</span><span>Rovitha Sri Kandasamy</span></button>
+      </div>
+    </header>
+
+    <main class="content cinematic-layout insights-content">
+      <section class="row row-top">
+        <article class="card hero-card shell-raise animate-in">
+          <p class="eyebrow">Signal Overview</p>
+          <h3>Decision quality grew 11% with lower context fragmentation.</h3>
+          <p class="lead-copy">Stable morning focus, explicit scenario testing, and intentional reset windows are the strongest multipliers in your current strategy cycle.</p>
+          <div class="kpi-row">
+            <div class="kpi"><strong data-counter="11" data-suffix="%">11%</strong><small>Decision accuracy</small></div>
+            <div class="kpi"><strong data-counter="18" data-suffix="%">18%</strong><small>Task thrash reduction</small></div>
+            <div class="kpi"><strong data-counter="4" data-suffix="h">4h</strong><small>Deep work/day</small></div>
+          </div>
+        </article>
+
+        <article class="card metric-stack shell-raise animate-in">
+          <h3>Signal Balance</h3>
+          <div class="ring-grid">
+            <div class="ring-wrap"><div class="ring ring-green ring-p78"><span data-counter="78" data-suffix="%">78%</span></div><small>Clarity</small></div>
+            <div class="ring-wrap"><div class="ring ring-blue ring-p69"><span data-counter="69" data-suffix="%">69%</span></div><small>Recovery</small></div>
+            <div class="ring-wrap"><div class="ring ring-neutral ring-p90"><span data-counter="90" data-suffix="%">90%</span></div><small>Focus</small></div>
+          </div>
+        </article>
+      </section>
+
+      <section class="row">
+        <article class="card timeline-section shell-raise animate-in">
+          <div class="card-title-row">
+            <h3>Signal Evolution</h3>
+            <span class="pill pill-blue">Trend narrative</span>
+          </div>
+          <div class="timeline-track">
+            <div class="timeline-progress"></div>
+            <article class="timeline-item"><h4>Pattern Baseline</h4><p>Context-switch reduction starts improving consistency.</p></article>
+            <article class="timeline-item"><h4>Stability Inflection</h4><p>Recovery checkpoints reduce decision volatility.</p></article>
+            <article class="timeline-item"><h4>Confidence Lift</h4><p>Scenario-first planning strengthens execution confidence.</p></article>
+          </div>
+        </article>
+      </section>
+
+      <section class="row row-bottom">
+        <article class="card tasks-card shell-raise animate-in">
+          <h3>Top Drivers</h3>
+          <ul class="task-list">
+            <li><span class="task-dot task-green"></span>Protected strategic window <span class="priority low">Positive</span></li>
+            <li><span class="task-dot task-red"></span>Late-day meeting cluster <span class="priority high">Risk</span></li>
+            <li><span class="task-dot task-blue"></span>Scenario-first planning <span class="priority low">Positive</span></li>
+          </ul>
+        </article>
+
+        <article class="card chart-card shell-raise animate-in">
+          <div class="card-title-row">
+            <h3>Pattern Drift</h3>
+            <span class="pill pill-blue">Model calibrated</span>
+          </div>
+          <div class="chart-wrap"><canvas id="performanceChart" aria-label="Insight trend chart"></canvas></div>
+          <p class="insights-copy">Momentum is strongest when deep work starts with an explicit risk boundary and a single key outcome.</p>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <aside class="ai-panel" id="aiPanel">
+    <div class="panel-head">
+      <h3>AI Command Notes</h3>
+      <button class="icon-btn ghost" id="panelToggle" type="button" aria-label="Collapse insights panel">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+
+    <article class="primary-insight shell-raise">
+      <span class="pill pill-blue">Primary Signal</span>
+      <p>Set one non-negotiable success criterion before starting complex sessions to stabilize outcomes.</p>
+    </article>
+
+    <button class="expand-btn" id="expandInsights" type="button" aria-expanded="false">
+      <i class="fa-solid fa-layer-group"></i> Show More Insights
+    </button>
+
+    <div class="secondary-insights" id="secondaryInsights">
+      <article><i class="fa-solid fa-wave-square"></i><p>Recovery quality predicts next-block performance more than total hours worked.</p></article>
+      <article><i class="fa-solid fa-gauge-high"></i><p>Execution confidence rises when context switches stay below four per cycle.</p></article>
+      <article><i class="fa-solid fa-list-check"></i><p>Decision logs improve weekly consistency by reducing rework loops.</p></article>
+    </div>
+  </aside>
+
+
+</body>
+</html>

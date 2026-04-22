@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LifeOS | Command Deck</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Orbitron:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script type="module" crossorigin src="/assets/gsap-0lJgtTtq.js"></script>
+  <script type="module" crossorigin src="/assets/three-Dz0kbOYw.js"></script>
+  <script type="module" crossorigin src="/assets/main-DdDq_3Om.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/main-CndWFFvC.css">
+</head>
+<body data-page="dashboard" class="page-enter">
+  <div class="scene-background" id="sceneBackground" aria-hidden="true"></div>
+  <div class="grain" aria-hidden="true"></div>
+
+  <aside class="sidebar" id="sidebar" aria-label="Primary Navigation">
+    <div class="brand">
+      <div class="brand-logo"><i class="fa-solid fa-cube"></i></div>
+      <div>
+        <h1>LifeOS</h1>
+        <p>Cognitive Operations</p>
+      </div>
+    </div>
+
+    <nav class="menu" aria-label="Primary">
+      <a href="index.html" data-nav="dashboard"><i class="fa-solid fa-compass"></i> Command Deck</a>
+      <a href="insights.html" data-nav="insights"><i class="fa-solid fa-chart-column"></i> Signal Lab</a>
+      <a href="simulator.html" data-nav="simulator"><i class="fa-solid fa-vial-circle-check"></i> Scenario Engine</a>
+      <a href="focus.html" data-nav="focus"><i class="fa-solid fa-crosshairs"></i> Deep Focus</a>
+    </nav>
+
+    <div class="sidebar-foot">
+      <span><i class="fa-solid fa-shield-halved"></i> Encrypted Session</span>
+      <span>v4.0</span>
+    </div>
+  </aside>
+
+  <div class="page-shell" id="pageShell">
+    <header class="top-nav card shell-raise">
+      <div class="left-top">
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Toggle sidebar">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <div>
+          <p class="eyebrow">System Brief</p>
+          <h2 class="section-title">Command Deck</h2>
+        </div>
+      </div>
+      <div class="right-top">
+        <span class="date-chip" id="dateChip"></span>
+        <button class="icon-btn" type="button" aria-label="Notifications"><i class="fa-regular fa-bell"></i><span class="dot"></span></button>
+        <button class="profile" type="button"><span class="avatar">AL</span><span>Rovitha Sri Kandasamy</span></button>
+      </div>
+    </header>
+
+    <main class="content cinematic-layout">
+      <section class="row row-top">
+        <article class="card hero-card shell-raise animate-in">
+          <p class="eyebrow">Mission Window</p>
+          <h3>Your highest-value decisions belong in the next 3 hours.</h3>
+          <p class="lead-copy">Signal quality is elevated. Move strategic calls into your peak block, compress low-value communication, and protect deep execution windows with recovery checkpoints.</p>
+          <div class="actions">
+            <button class="btn btn-primary" type="button"><i class="fa-solid fa-rocket"></i> Lock Strategy</button>
+            <button class="btn btn-ghost" type="button"><i class="fa-solid fa-sliders"></i> Tune Plan</button>
+          </div>
+        </article>
+
+        <article class="card metric-stack shell-raise animate-in">
+          <h3>Live Core Metrics</h3>
+          <div class="ring-grid">
+            <div class="ring-wrap">
+              <div class="ring ring-green ring-p84"><span data-counter="84" data-suffix="%">84%</span></div>
+              <small>Execution</small>
+            </div>
+            <div class="ring-wrap">
+              <div class="ring ring-blue ring-p73"><span data-counter="73" data-suffix="%">73%</span></div>
+              <small>Recovery</small>
+            </div>
+            <div class="ring-wrap">
+              <div class="ring ring-neutral ring-p91"><span data-counter="91" data-suffix="%">91%</span></div>
+              <small>Focus</small>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="row">
+        <article class="card timeline-section shell-raise animate-in">
+          <div class="card-title-row">
+            <h3>Operational Timeline</h3>
+            <span class="pill pill-blue">Scroll to explore</span>
+          </div>
+          <div class="timeline-track">
+            <div class="timeline-progress"></div>
+            <article class="timeline-item"><h4>08:45 - Prime Analysis</h4><p>Run high-leverage architecture and strategic decision tasks.</p></article>
+            <article class="timeline-item"><h4>11:30 - Execution Sprint</h4><p>Convert strategic choices into focused implementation cycles.</p></article>
+            <article class="timeline-item"><h4>15:00 - Recovery Gate</h4><p>Short reset and signal review before lower-cognitive commitments.</p></article>
+          </div>
+        </article>
+      </section>
+
+      <section class="row">
+        <article class="card chart-card shell-raise animate-in">
+          <div class="card-title-row">
+            <h3>Trajectory Graph</h3>
+            <span class="pill pill-blue">+14.2% this week</span>
+          </div>
+          <div class="chart-wrap"><canvas id="performanceChart" aria-label="Weekly performance chart"></canvas></div>
+        </article>
+      </section>
+
+      <section class="row row-single">
+        <article class="card sim-card shell-raise animate-in">
+          <div class="card-title-row">
+            <h3>Quick Simulation</h3>
+            <span class="pill pill-green">Decision AI</span>
+          </div>
+          <form class="simulator-form" data-output="simOutputDashboard" aria-label="Quick simulation form">
+            <label for="scenarioDashboard">Enter a real scenario</label>
+            <textarea id="scenarioDashboard" name="scenario" placeholder="Example: I plan deep study before noon, schedule meetings in late afternoon, and reserve 30 minutes for a reset."></textarea>
+            <button class="btn btn-primary" type="submit"><i class="fa-solid fa-play"></i> Run Simulation</button>
+          </form>
+          <div class="sim-output" id="simOutputDashboard" aria-live="polite" aria-atomic="true">
+            <span class="pill pill-blue">Awaiting Scenario</span>
+            <p>Describe a plan to get forecasted outcomes and tactical guidance.</p>
+          </div>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <aside class="ai-panel" id="aiPanel">
+    <div class="panel-head">
+      <h3>AI Command Notes</h3>
+      <button class="icon-btn ghost" id="panelToggle" type="button" aria-label="Collapse insights panel">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+    </div>
+
+    <article class="primary-insight shell-raise">
+      <span class="pill pill-blue">Primary Signal</span>
+      <p>Decision confidence spikes when strategic work starts after a short movement reset and one clearly defined success metric.</p>
+    </article>
+
+    <section class="side-tasks shell-raise">
+      <div class="side-tasks-head">
+        <h4>Priority Queue</h4>
+        <span class="pill pill-red">3</span>
+      </div>
+      <ul class="task-list compact">
+        <li><span class="task-dot task-red"></span>Finalize architecture memo <span class="priority high">High</span></li>
+        <li><span class="task-dot task-amber"></span>Resolve model assumptions <span class="priority medium">Med</span></li>
+        <li><span class="task-dot task-blue"></span>Plan recovery window <span class="priority low">Low</span></li>
+      </ul>
+    </section>
+
+    <button class="expand-btn" id="expandInsights" type="button" aria-expanded="false">
+      <i class="fa-solid fa-layer-group"></i> Show More Insights
+    </button>
+
+    <div class="secondary-insights" id="secondaryInsights" hidden>
+      <article><i class="fa-solid fa-brain"></i><p>Context switching above five transitions drops quality by up to 18%.</p></article>
+      <article><i class="fa-solid fa-stopwatch"></i><p>Use 50-minute strategic blocks when cognitive load is heavy.</p></article>
+      <article><i class="fa-solid fa-bolt"></i><p>Capture next-action decisions immediately to maintain execution momentum.</p></article>
+    </div>
+  </aside>
+
+
+</body>
+</html>
